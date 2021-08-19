@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security</title>
+</head>
+<body>
+    <h1>Security</h1>
+    <div id="app"></div>
+    <!--The Security page should accurately describe all security measures involved in the production of your site, including, but not limited to:
+            any security-related HTTP headers, their values, and their purpose,
+            any encryption of data in transit,
+            any security features that are a result of not doing things,
+            any security principles pertaining to the production of this site.
+    -->
+
+
+        <p>
+            1. Security related headers
+
+            All security headers have been set in the _Headers.txt file in the publish directory. each page has X-Frame-Options: DENY and a
+            X-XSS-Protection: 1; mode=block. The X-Frame-Options HTTP response header can be used to indicate whether or not a browser should be 
+            allowed to render a page in a frame and X-XSS-Protection stops pages from loading when the site detects reflected cross-site scripting (XSS) attacks.
+        </p>
+
+    <script type="module" src="/main.js"></script>
+
+</body>
+</html>

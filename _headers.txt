@@ -1,0 +1,16 @@
+
+index.html
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+
+qa.html
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+
+security.html
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+
+bad-example.html
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block

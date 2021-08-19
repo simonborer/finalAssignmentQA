@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bad Example</title>
+</head>
+<body>
+    <h1>Bad Examples</h1>
+    <div id="app"></div>
+
+    <!--
+        Your "bad example" page should explain how you've included an example of what not to do for site security. 
+        Document this example, and explain why it's a bad idea, and how it could be avoided. 
+        Your example must not simply be an omitted or poorly formed HTTP header.
+    -->
+
+
+    <form action="" method="get">
+        <div>
+            <label for="user">Username: </label>
+            <input type="text" name="user">
+        </div>
+        <div>
+            <label for="password">Password: </label>
+            <input type="text" name="pass">
+        </div>
+        <div>
+            <input type="submit" value="register">
+        </div>
+    </form>
+
+        <p>
+            The previous form on this page is a basic web form that is a security/QA nightmare for several reasons.
+        </p>
+
+            <ol>
+                <li>The password input is not hidden. You see the characters being typed into the input box.</li>
+                <li>The form is a GET method form, which appends the form info to the address bar in a very obvious way.</li>
+                <li>There is no form validation on either the client side or the server side.</li>
+                <li>No password restrictions are being used to create more secure logins</li>
+                <li>If this was connected to a database you best believe the inputs would not be sanitized and they would get blown up immediately</li>
+            </ol> 
+        <h4>Solutions</h4>
+        <p> 
+            Some very simple solutions to this are: Hide the password input, require client and server side validation. 
+        </p>
+        <p>
+            Require upper and lowercase letters, one number and one special character or another proven set of characters that increase the password strength. 
+        </p>    
+        <p>
+            Hashing passwords in the db will help this. Switch the form to post, collect it somewhere and sanitize the input so the the eventual db won't be vulnerable to sql injection.
+        </p>
+        
+    <script type="module" src="/main.js"></script>
+</body>
+</html>
